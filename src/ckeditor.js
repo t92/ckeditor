@@ -119,10 +119,25 @@ ClassicEditor.defaultConfig = {
 				
 				name: 'allow-all',
 	    		url: /^.+/,
-	    		html: match =>  `<div style="position:relative;width: 100%;">
+	    		html: match =>  {
+	    			
+	    			//输入iframe 或者 video标签 直接返回  
+	    			//输入 http地址 放入iframe 中
+	    			const iframeReg = /^(\<iframe |\<video ){1}\w+/
+	    			
+	    			if(iframeReg.test(match)){
+	    				
+	    				return match
+	    			}else{
+	    				
+	    				return `<div style="position:relative;width: 100%;">
 	    							<iframe src="${match}" frameborder="0" allowFullScreen="false"></iframe>
-	    						</div>
-	    						`
+	    						</div>`
+	    			}
+	    			
+	    			
+	    		}
+	    						
 			}
 		]
 	}
