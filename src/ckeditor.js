@@ -26,7 +26,6 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
-import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily'
@@ -35,6 +34,7 @@ import AlignMent from '@ckeditor/ckeditor5-alignment/src/alignment'
 import HighLight from '@ckeditor/ckeditor5-highlight/src/highlight'
 
 export default class ClassicEditor extends ClassicEditorBase {}
+
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
@@ -56,7 +56,6 @@ ClassicEditor.builtinPlugins = [
 	List,
 	MediaEmbed,
 	Paragraph,
-	PasteFromOffice,
 	Table,
 	TableToolbar,
 	FontFamily,
@@ -134,10 +133,7 @@ ClassicEditor.defaultConfig = {
 	    							<iframe src="${match}" frameborder="0" allowFullScreen="false"></iframe>
 	    						</div>`
 	    			}
-	    			
-	    			
 	    		}
-	    						
 			}
 		]
 	}
